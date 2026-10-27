@@ -1,136 +1,112 @@
-/* IT/EN dictionary + language switch. Values may contain HTML. */
+/* Dizionario IT/EN e cambio lingua. I valori possono contenere HTML. */
 (function () {
   'use strict';
   var DICT = {
-    en: {
-      'skip': 'Go to download',
-      'nav.why': 'Why', 'nav.how': 'How it works', 'nav.guide': 'Guide', 'nav.dl': 'Download',
-      'hero.kicker': 'Windows app · free · open source',
-      'hero.title': 'Hear everything.<br><span>Before anyone.</span>',
-      'hero.sub': 'BOOST TATTIC is the free Windows app that cleans up Warzone and MW4 audio: footsteps, reloads and enemy voices up front. <strong>Boost Audio AI Engine</strong> at 16 channels, competitive presets and automatic EQ for <em>your</em> headphones.',
-      'hero.dl': '⬇ Download for Windows', 'hero.guide': 'Install guide',
-      'hero.micro': 'Free · Open source · Windows 10/11 64-bit · <span id="ver">{ver}</span>',
-      'stats.s1': 'audio channels', 'stats.s2': 'Boost Engine params', 'stats.s3': 'headphone measurements', 'stats.s4': 'forever',
-      'why.kicker': 'The problem', 'why.h2': 'Stock audio loses you the fights that matter.',
-      'why.c1h': 'Buried footsteps', 'why.c1p': 'Your gun, bombardments and wash cover enemy footsteps exactly when you must decide to push or not.',
-      'why.c2h': 'Uncalibrated headphones', 'why.c2p': 'Every headphone colors sound its own way: without EQ you hear a distorted version of the battlefield.',
-      'why.c3h': 'Fragile setups', 'why.c3p': 'Voicemeeter and EQ chains that break at every Windows update, with extra latency on top.',
-      'why.turn': 'It\'s not your hearing, it\'s the game\'s mix. <strong>One 16-channel engine</strong> separates sounds before they reach your headphones — footsteps, gunfire, ambience — lifts what matters and tames the rest. You decide how much.',
-      'ben.kicker': 'Benefits', 'ben.h2': 'Built for players who compete.',
-      'ben.b1h': 'Footsteps first', 'ben.b1p': '<strong>Enemies arrive on time</strong> — the Recon profile lifts enemy footsteps 3 dB while cutting the rest.',
-      'ben.b2h': 'Your gun stays quiet', 'ben.b2p': '<strong>Foreign gunfire tamed up to 16 dB</strong> — stay composed even in close squad fights.',
-      'ben.b3h': 'EQ for your headphones', 'ben.b3p': '<strong>Real calibration, not generic presets</strong> — 68 ready EQs + a 6,797-measurement database.',
-      'ben.b4h': 'One app does it all', 'ben.b4p': '<strong>No Voicemeeter, no APO</strong> — mixer, engine, tray and Windows autostart built in.',
-      'ben.b5h': 'Overlay + hotkeys', 'ben.b5p': '<strong>Switch presets without leaving the game</strong> — transparent overlay and Ctrl+Alt for weapon, style, volume and boost up to +12 dB.',
-      'ben.b6h': 'Boost Audio AI Engine', 'ben.b6p': '<strong>302 parameters reasoning about sound</strong> — separates footsteps, gunfire and ambience and rebalances them in real time.',
-      'how.kicker': 'How it works', 'how.h2': 'Three steps and you\'re in the match.',
-      'how.s1h': 'Install', 'how.s1p': 'Download the exe, install it, add the free VB-CABLE virtual cable. The guide below walks you through.',
-      'how.s2h': 'Route', 'how.s2p': 'In-game, pick TATTIC as audio output; Discord and browser stay straight on the headphones.',
-      'how.s3h': 'Dominate', 'how.s3p': 'Pick a preset (start with ClassicPlus-UltraLo), calibrate the EQ on your headphones and play.',
-      'val.kicker': 'Character', 'val.h2': 'Precise. Functional.<br>Resistant.',
-      'val.t1': '<strong>Precise</strong> — every footstep in place, every dB under control.',
-      'val.t2': '<strong>Functional</strong> — one tool that does everything, no fragile chains.',
-      'val.t3': '<strong>Resistant</strong> — a setup that survives patches, seasons and meta shifts.',
-      'guide.kicker': 'Install guide', 'guide.h2': 'From zero to in-game in ten minutes.',
-      'guide.g1h': 'Download the installer', 'guide.g1p': 'Hit <strong>Download for Windows</strong> above: the installer downloads straight away as <code>.exe</code>. Run it and finish the install.',
-      'guide.g2h': 'Install VB-CABLE', 'guide.g2p': 'Download <strong>VB-CABLE Virtual Audio Device</strong> (free, vb-audio.com), install it and reboot. The app renames it to <strong>TATTIC</strong> by itself.',
-      'guide.g3h': 'Set up the game', 'guide.g3p': 'In Warzone: audio output to <strong>TATTIC</strong>, 16 channels at 48 kHz. Discord, browser and system sounds stay on the real headphones: Windows mixes them.',
-      'guide.g4h': 'Start the audio', 'guide.g4p': 'Open BOOST TATTIC, pick the headphones as output and press <strong>Start audio</strong>: you should see channels moving already in the lobby. From here it lives in the system tray and starts with Windows.',
-      'guide.g5h': 'Pick the preset', 'guide.g5p': 'Start with <strong>ClassicPlus-UltraLo</strong>, then try the TATTIC 1 styles (Recon recommended for footsteps). Weapon level with <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1</kbd>…<kbd>5</kbd>.',
-      'guide.g6h': 'Overlay and hotkeys', 'guide.g6p': 'Enable the overlay in Settings (needs the game in <strong>borderless fullscreen</strong>). Quick memo: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>O</kbd> overlay, <kbd>B</kbd> bypass, <kbd>↑</kbd><kbd>↓</kbd> volume, <kbd>PgUp</kbd><kbd>PgDn</kbd> boost.',
-      'guide.req1h': 'Requirements', 'guide.req1p': 'Windows 10/11 64-bit · any headphones · VB-CABLE (free) · ~150 MB free',
-      'guide.req2h': 'Not needed', 'guide.req2p': 'Voicemeeter · Equalizer APO · dedicated sound card · account · credit card',
-      'faq.kicker': 'FAQ', 'faq.h2': 'Clear before you download.',
-      'faq.q1s': 'Is it really free?', 'faq.q1p': 'Yes. Free and open source, no account or subscription. The only external software, VB-CABLE, is free for personal use.',
-      'faq.q2s': 'Will I get banned?', 'faq.q2p': 'No: BOOST TATTIC doesn\'t modify the game, inject code or read its memory — it only processes Windows audio output like a virtual mixer. Activision has the final say, as always.',
-      'faq.q3s': 'Does it work with my headphones?', 'faq.q3p': 'Yes, with any headphones: 68 ready EQs plus a 6,797-measurement database to calibrate yours.',
-      'faq.q4s': 'Do I need a special sound card?', 'faq.q4p': 'No. Windows 10/11 64-bit and any headphones are enough. Everything else is software.',
-      'faq.q5s': 'Does the overlay work fullscreen?', 'faq.q5p': 'It works with the game in <strong>borderless fullscreen</strong>, not exclusive fullscreen. <kbd>Ctrl</kbd>+<kbd>Alt</kbd> hotkeys always work.',
-      'faq.q6s': 'Do I need Voicemeeter?', 'faq.q6p': 'No. BOOST TATTIC does it all: mixer, engine, tray, autostart. No Voicemeeter, no Equalizer APO.',
-      'faq.q7s': 'How do I get updates?', 'faq.q7p': 'From the app\'s Updates page: the preset library updates from there, for the app download the new GitHub release.',
-      'faq.q8s': 'I hear nothing, what do I check?', 'faq.q8p': 'Three things, in order: output to TATTIC in the game; Start audio in the app; virtual cable at 16 channels and 48 kHz.',
-      'final.h2': 'Install in 5 minutes,<br>feel it from the first fight.',
-      'final.btn': '⬇ Download BOOST TATTIC free',
-      'final.p': 'Windows 10/11 64-bit · open source · <a href="https://github.com/inferis995/tattic">code on GitHub</a>',
-      'foot.a': 'BOOST TATTIC — personal open-source project, non-commercial.'
-    },
     it: {
       'skip': 'Vai al download',
-      'nav.why': 'Perché', 'nav.how': 'Come funziona', 'nav.guide': 'Guida', 'nav.dl': 'Scarica',
+      'nav.app': "L'app", 'nav.feat': 'Funzioni', 'nav.guide': 'Guida', 'nav.dl': 'Scarica',
       'hero.kicker': 'App Windows · gratis · open source',
       'hero.title': 'Senti tutto.<br><span>Prima di tutti.</span>',
-      'hero.sub': 'BOOST TATTIC è l\'app gratis per Windows che ripulisce l\'audio di Warzone e MW4: passi, ricariche e voci nemiche davanti a tutto. <strong>Boost Audio AI Engine</strong> a 16 canali, preset competitivi ed EQ automatico per le <em>tue</em> cuffie.',
-      'hero.dl': '⬇ Scarica per Windows', 'hero.guide': 'Guida installazione',
-      'hero.micro': 'Gratis · Open source · Windows 10/11 64-bit · <span id="ver">{ver}</span>',
-      'stats.s1': 'canali audio', 'stats.s2': 'parametri Boost Engine', 'stats.s3': 'misure cuffie', 'stats.s4': 'per sempre',
-      'why.kicker': 'Il problema', 'why.h2': 'L\'audio stock ti fa perdere i fight che contano.',
-      'why.c1h': 'Passi coperti', 'why.c1p': 'Il tuo sparo, i bombardamenti e il wash coprono i passi nemici proprio quando devi decidere se pushare o no.',
-      'why.c2h': 'Cuffie non calibrate', 'why.c2p': 'Ogni cuffia colora il suono a modo suo: senza EQ senti una versione falsata del campo di battaglia.',
-      'why.c3h': 'Setup fragili', 'why.c3p': 'Catene di Voicemeeter ed EQ che si rompono a ogni aggiornamento di Windows, con latenza in più.',
-      'why.turn': 'Non è il tuo udito, è il mix del gioco. <strong>Un solo motore a 16 canali</strong> separa i suoni prima che arrivino alle cuffie — passi, spari, ambiente — alza ciò che conta e abbassa il resto. Tu decidi solo quanto.',
-      'ben.kicker': 'Benefici', 'ben.h2': 'Costruito per chi gioca sul serio.',
-      'ben.b1h': 'Passi in primo piano', 'ben.b1p': '<strong>Il nemico si sente arrivare</strong> — il profilo Recon alza i passi nemici di 3 dB tagliando il resto.',
-      'ben.b2h': 'Il tuo sparo non ti assorda', 'ben.b2p': '<strong>Spari altrui domati fino a 16 dB</strong> — resti lucido anche negli scontri a squadre ravvicinati.',
-      'ben.b3h': 'EQ sulle tue cuffie', 'ben.b3p': '<strong>Calibrazione reale, non preset generici</strong> — 68 EQ pronti + database di 6.797 misure.',
-      'ben.b4h': 'Tutto in una sola app', 'ben.b4p': '<strong>Niente Voicemeeter, niente APO</strong> — mixer, motore, tray e avvio con Windows integrati.',
-      'ben.b5h': 'Overlay + hotkey', 'ben.b5p': '<strong>Cambia preset senza uscire dal gioco</strong> — overlay trasparente e Ctrl+Alt per arma, stile, volume e boost fino a +12 dB.',
-      'ben.b6h': 'Boost Audio AI Engine', 'ben.b6p': '<strong>302 parametri che ragionano sul suono</strong> — separa passi, spari e ambiente e li rimette in equilibrio in tempo reale.',
-      'how.kicker': 'Come funziona', 'how.h2': 'Tre passi e sei in partita.',
-      'how.s1h': 'Installa', 'how.s1p': 'Scarica l\'exe, installa, aggiungi il cavo virtuale gratuito VB-CABLE. La guida sotto ti porta per mano.',
-      'how.s2h': 'Instrada', 'how.s2p': 'Nel gioco scegli TATTIC come uscita audio; Discord e browser restano diretti alle cuffie.',
-      'how.s3h': 'Domina', 'how.s3p': 'Scegli il preset (parti da ClassicPlus-UltraLo), calibra l\'EQ sulle tue cuffie e gioca.',
-      'val.kicker': 'Il carattere', 'val.h2': 'Preciso. Funzionale.<br>Resistente.',
-      'val.t1': '<strong>Precise</strong> — ogni passo al suo posto, ogni dB sotto controllo.',
-      'val.t2': '<strong>Functional</strong> — un solo strumento che fa tutto, senza catene fragili.',
-      'val.t3': '<strong>Resistant</strong> — setup che sopravvive a patch, stagioni e cambi meta.',
-      'guide.kicker': 'Guida installazione', 'guide.h2': 'Da zero a in-game in dieci minuti.',
-      'guide.g1h': 'Scarica l\'installer', 'guide.g1p': 'Premi <strong>Scarica per Windows</strong> qui sopra: l\'installer parte subito in download come <code>.exe</code>. Eseguilo e completa l\'installazione.',
-      'guide.g2h': 'Installa VB-CABLE', 'guide.g2p': 'Scarica <strong>VB-CABLE Virtual Audio Device</strong> (gratuito, vb-audio.com), installalo e riavvia. L\'app lo rinomina in <strong>TATTIC</strong> da sola.',
-      'guide.g3h': 'Imposta il gioco', 'guide.g3p': 'In Warzone: audio in uscita su <strong>TATTIC</strong>, 16 canali a 48 kHz. Discord, browser e suoni di sistema restano sulle cuffie vere: li mescola Windows.',
-      'guide.g4h': 'Avvia l\'audio', 'guide.g4p': 'Apri BOOST TATTIC, scegli le cuffie in uscita e premi <strong>Avvia audio</strong>: devi vedere i canali muoversi già in lobby. Da qui resta nella barra di sistema e parte con Windows.',
-      'guide.g5h': 'Scegli il preset', 'guide.g5p': 'Parti da <strong>ClassicPlus-UltraLo</strong>, poi prova gli stili TATTIC 1 (Recon consigliato per i passi). Livello arma con <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1</kbd>…<kbd>5</kbd>.',
-      'guide.g6h': 'Overlay e tasti', 'guide.g6p': 'Attiva l\'overlay da Impostazioni (serve gioco in <strong>schermo intero senza bordi</strong>). Memo rapido: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>O</kbd> overlay, <kbd>B</kbd> bypass, <kbd>↑</kbd><kbd>↓</kbd> volume, <kbd>PagSu</kbd><kbd>PagGiù</kbd> boost.',
-      'guide.req1h': 'Requisiti', 'guide.req1p': 'Windows 10/11 64-bit · cuffie qualsiasi · VB-CABLE (gratis) · ~150 MB liberi',
-      'guide.req2h': 'Non serve', 'guide.req2p': 'Voicemeeter · Equalizer APO · scheda audio dedicata · account · carta di credito',
-      'faq.kicker': 'Domande frequenti', 'faq.h2': 'Chiaro prima di scaricare.',
-      'faq.q1s': 'È davvero gratis?', 'faq.q1p': 'Sì. Gratis e open source, senza account né abbonamento. L\'unico software esterno, VB-CABLE, è gratuito per uso personale.',
-      'faq.q2s': 'Rischio il ban?', 'faq.q2p': 'No: BOOST TATTIC non modifica il gioco, non inietta codice e non ne legge la memoria — lavora solo sull\'audio di Windows come un mixer virtuale. La valutazione finale resta comunque di Activision.',
-      'faq.q3s': 'Funziona con le mie cuffie?', 'faq.q3p': 'Sì, con qualsiasi cuffia: include 68 EQ pronti e un database di 6.797 misure per calibrare la risposta sulle tue.',
-      'faq.q4s': 'Serve una scheda audio particolare?', 'faq.q4p': 'No. Basta Windows 10/11 a 64 bit e un paio di cuffie. Tutto il resto è software.',
-      'faq.q5s': 'L\'overlay funziona in schermo intero?', 'faq.q5p': 'Funziona con il gioco in <strong>schermo intero senza bordi</strong>, non in schermo intero esclusivo. I tasti <kbd>Ctrl</kbd>+<kbd>Alt</kbd> funzionano comunque.',
-      'faq.q6s': 'Devo usare Voicemeeter?', 'faq.q6p': 'No. BOOST TATTIC fa tutto da solo: mixer, motore, tray, avvio automatico. Niente Voicemeeter né Equalizer APO.',
-      'faq.q7s': 'Come ricevo gli aggiornamenti?', 'faq.q7p': 'Dalla pagina Aggiornamenti dell\'app: la libreria preset si aggiorna da lì, per l\'app scarichi la nuova release da GitHub.',
-      'faq.q8s': 'Non sento nulla, cosa controllo?', 'faq.q8p': 'Tre cose, in ordine: nel gioco esci su TATTIC; nell\'app premi Avvia audio; controlla che il cavo virtuale sia a 16 canali e 48 kHz.',
-      'final.h2': 'Installa in 5 minuti,<br>dal primo fight senti la differenza.',
-      'final.btn': '⬇ Scarica BOOST TATTIC gratis',
-      'final.p': 'Windows 10/11 64-bit · open source · <a href="https://github.com/inferis995/tattic">codice su GitHub</a>',
-      'foot.a': 'BOOST TATTIC — progetto personale open source, non commerciale.'
+      'hero.sub': "Motore audio a 16 canali per Warzone e MW4: passi nemici in primo piano, il tuo sparo sotto controllo, EQ calibrato sulle tue cuffie. Un'app sola, setup guidato in cinque passi.",
+      'hero.dl': 'Scarica per Windows', 'hero.guide': 'Come si installa',
+      'hero.micro': 'Windows 10/11 64-bit · installer diretto',
+      'stats.s1': 'canali elaborati', 'stats.s2': 'passi di setup', 'stats.s3': 'cuffie misurate', 'stats.s4': 'nessun account',
+      'app.kicker': "L'app", 'app.h2': 'Tutto in una finestra.',
+      'app.t1': 'Pannello', 'app.t2': 'Dal vivo', 'app.t3': 'Setup guidato', 'app.t4': 'Profili',
+      'app.c1': 'Stile e livello della tua arma in una matrice, volume e boost con limitatore, EQ della cuffia, profili in alto.',
+      'app.c2': 'Uscita, segnale del gioco, carico del motore e buffer; i 16 canali e cosa sta facendo il motore in tempo reale.',
+      'app.c3': 'Cinque passi: cavo virtuale, cuffie, Windows, gioco, prova dei canali. Ogni passo dice cosa manca.',
+      'app.c4': 'Preset, volume, boost, EQ e cuffie salvati con un nome. Si cambiano anche in partita.',
+      'feat.kicker': 'Funzioni', 'feat.h2': 'Pensata per chi gioca competitivo.',
+      'feat.f1h': 'Passi in primo piano', 'feat.f1p': 'Il motore separa passi, spari e ambiente e alza quello che serve. Lo stile Recon spinge i passi lontani.',
+      'feat.f2h': 'Il tuo sparo sotto controllo', 'feat.f2p': 'Cinque livelli per la tua arma, da Originale a Ultra basso, anche da tastiera in partita.',
+      'feat.f3h': 'EQ sulle tue cuffie', 'feat.f3p': '68 EQ pronti e la ricerca su 6.797 misure: trovi il tuo modello e lo calibri in un clic.',
+      'feat.f4h': 'Setup guidato', 'feat.f4p': 'Installa il cavo virtuale, configura Windows e verifica i 16 canali. A ogni avvio ricontrolla e ripara da solo.',
+      'feat.f5h': 'Profili', 'feat.f5p': 'Preset, volume, boost, EQ e cuffie salvati con un nome. Si cambiano con Ctrl+Alt+P senza uscire dal gioco.',
+      'feat.f6h': 'Overlay e tasti rapidi', 'feat.f6p': 'Pannello trasparente sopra il gioco e tasti Ctrl+Alt per arma, stile, volume e boost fino a +12 dB senza distorsione.',
+      'feat.turn': "Niente Voicemeeter, niente Equalizer APO: il mixer e il motore sono dentro l'app. Discord e browser vanno dritti alle cuffie.",
+      'guide.kicker': 'Installazione', 'guide.h2': 'Da zero alla partita in cinque minuti.',
+      'guide.g1h': 'Scarica e installa', 'guide.g1p': 'Il pulsante <strong>Scarica per Windows</strong> scarica direttamente <code>Tactic-setup.exe</code>. Se Windows mostra "PC protetto": <em>Ulteriori informazioni → Esegui comunque</em>.',
+      'guide.g2h': 'Segui il setup', 'guide.g2p': 'Al primo avvio parte il setup guidato: installa VB-CABLE (gratuito) dal sito ufficiale, propone il riavvio se serve e riprende da solo.',
+      'guide.g3h': 'Configura con un clic', 'guide.g3p': 'Scegli le cuffie e premi <strong>Configura tutto</strong>: cavo a 16 canali e 48 kHz, cuffie pulite, nessun abbassamento durante le chiamate.',
+      'guide.g4h': 'Imposta il gioco', 'guide.g4p': "In Warzone: <em>Audio → Dispositivo audio del gioco</em> su <strong>CABLE Input</strong>, modalità cuffie avanzata spenta. L'app ti conferma quando il segnale arriva.",
+      'guide.g5h': 'Scegli e salva', 'guide.g5p': 'Parti da <strong>TATTIC 1 · Recon</strong>, scegli il livello della tua arma, poi salva tutto in un profilo.',
+      'guide.req1h': 'Serve', 'guide.req1p': "Windows 10/11 64-bit · cuffie qualsiasi · VB-CABLE (lo installa l'app)",
+      'guide.req2h': 'Non serve', 'guide.req2p': 'Voicemeeter · Equalizer APO · scheda audio dedicata · account',
+      'faq.h2': 'Prima di scaricare.',
+      'faq.q1s': 'È gratis?', 'faq.q1p': "Sì, gratis e open source, senza account. VB-CABLE è donationware di VB-Audio: l'app lo scarica dal loro sito ufficiale.",
+      'faq.q2s': 'Tocca il gioco?', 'faq.q2p': "No. Non modifica file del gioco, non inietta codice e non legge la memoria: lavora solo sull'audio che Windows riceve, come un mixer. Le regole del gioco restano di Activision.",
+      'faq.q3s': 'Funziona con le mie cuffie?', 'faq.q3p': "Sì, con qualsiasi cuffia stereo. Il suono 3D lo crea il motore; l'EQ corregge la risposta del tuo modello.",
+      'faq.q4s': 'Devo riavviare il PC?', 'faq.q4p': "Solo se Windows lo richiede dopo l'installazione del cavo virtuale. L'app te lo propone e dopo il riavvio riprende il setup da dove era.",
+      'faq.q5s': "L'overlay funziona in schermo intero?", 'faq.q5p': 'Con il gioco in <strong>schermo intero senza bordi</strong>. I tasti Ctrl+Alt funzionano sempre.',
+      'faq.q6s': 'Come si aggiorna?', 'faq.q6p': "Da Impostazioni → Aggiornamenti: la libreria dei preset si aggiorna nell'app, la nuova versione dell'app si scarica da qui.",
+      'faq.q7s': 'Non sento il gioco, cosa controllo?', 'faq.q7p': 'Apri Setup: ogni passo mostra cosa manca. Di solito è il dispositivo audio del gioco, che deve essere CABLE Input.',
+      'final.h2': 'Pronto in cinque minuti.', 'final.btn': 'Scarica BOOST TATTIC',
+      'final.p': 'Windows 10/11 64-bit', 'final.all': 'tutte le versioni', 'final.code': 'codice su GitHub',
+      'foot.a': 'BOOST TATTIC — progetto personale open source, non commerciale. Non affiliato ad Activision.', 'foot.lic': 'Licenze'
+    },
+    en: {
+      'skip': 'Go to download',
+      'nav.app': 'The app', 'nav.feat': 'Features', 'nav.guide': 'Guide', 'nav.dl': 'Download',
+      'hero.kicker': 'Windows app · free · open source',
+      'hero.title': 'Hear everything.<br><span>Before anyone.</span>',
+      'hero.sub': 'A 16-channel audio engine for Warzone and MW4: enemy footsteps up front, your own gunfire under control, EQ calibrated to your headphones. One app, five-step guided setup.',
+      'hero.dl': 'Download for Windows', 'hero.guide': 'How to install',
+      'hero.micro': 'Windows 10/11 64-bit · direct installer',
+      'stats.s1': 'channels processed', 'stats.s2': 'setup steps', 'stats.s3': 'headphones measured', 'stats.s4': 'no account',
+      'app.kicker': 'The app', 'app.h2': 'Everything in one window.',
+      'app.t1': 'Panel', 'app.t2': 'Live', 'app.t3': 'Guided setup', 'app.t4': 'Profiles',
+      'app.c1': 'Style and your weapon level in one grid, volume and boost with limiter, headphone EQ, profiles on top.',
+      'app.c2': 'Output, game signal, engine load and buffer; the 16 channels and what the engine is doing in real time.',
+      'app.c3': 'Five steps: virtual cable, headphones, Windows, game, channel test. Each step tells you what is missing.',
+      'app.c4': 'Preset, volume, boost, EQ and headphones saved under a name. Switch them mid-match too.',
+      'feat.kicker': 'Features', 'feat.h2': 'Built for competitive players.',
+      'feat.f1h': 'Footsteps up front', 'feat.f1p': 'The engine separates footsteps, gunfire and ambience and lifts what matters. The Recon style pushes distant steps.',
+      'feat.f2h': 'Your gunfire under control', 'feat.f2p': 'Five levels for your weapon, from Stock to Ultra low, switchable from the keyboard mid-match.',
+      'feat.f3h': 'EQ for your headphones', 'feat.f3p': '68 ready-made EQs and search across 6,797 measurements: find your model and calibrate in one click.',
+      'feat.f4h': 'Guided setup', 'feat.f4p': 'Installs the virtual cable, configures Windows and checks all 16 channels. Re-checks and repairs itself at every start.',
+      'feat.f5h': 'Profiles', 'feat.f5p': 'Preset, volume, boost, EQ and headphones saved under a name. Switch with Ctrl+Alt+P without leaving the game.',
+      'feat.f6h': 'Overlay and hotkeys', 'feat.f6p': 'Transparent panel over the game and Ctrl+Alt keys for weapon, style, volume and boost up to +12 dB without distortion.',
+      'feat.turn': 'No Voicemeeter, no Equalizer APO: mixer and engine live inside the app. Discord and browser go straight to your headphones.',
+      'guide.kicker': 'Install', 'guide.h2': 'From zero to the match in five minutes.',
+      'guide.g1h': 'Download and install', 'guide.g1p': 'The <strong>Download for Windows</strong> button downloads <code>Tactic-setup.exe</code> directly. If Windows shows "PC protected": <em>More info → Run anyway</em>.',
+      'guide.g2h': 'Follow the setup', 'guide.g2p': 'The guided setup starts on first launch: it installs VB-CABLE (free) from the official site, offers a reboot if needed and resumes by itself.',
+      'guide.g3h': 'Configure in one click', 'guide.g3p': 'Pick your headphones and press <strong>Configure all</strong>: cable at 16 channels and 48 kHz, clean headphones, no ducking during calls.',
+      'guide.g4h': 'Set up the game', 'guide.g4p': 'In Warzone: <em>Audio → Game audio device</em> to <strong>CABLE Input</strong>, advanced headphone mode off. The app confirms when the signal arrives.',
+      'guide.g5h': 'Pick and save', 'guide.g5p': 'Start from <strong>TATTIC 1 · Recon</strong>, choose your weapon level, then save it all as a profile.',
+      'guide.req1h': 'You need', 'guide.req1p': 'Windows 10/11 64-bit · any headphones · VB-CABLE (installed by the app)',
+      'guide.req2h': 'Not needed', 'guide.req2p': 'Voicemeeter · Equalizer APO · dedicated sound card · account',
+      'faq.h2': 'Before you download.',
+      'faq.q1s': 'Is it free?', 'faq.q1p': 'Yes, free and open source, no account. VB-CABLE is donationware by VB-Audio: the app downloads it from their official site.',
+      'faq.q2s': 'Does it touch the game?', 'faq.q2p': "No. It doesn't modify game files, inject code or read memory: it only processes the audio Windows receives, like a mixer. The game's rules remain Activision's.",
+      'faq.q3s': 'Does it work with my headphones?', 'faq.q3p': 'Yes, with any stereo headphones. The engine creates the 3D sound; the EQ corrects your model\'s response.',
+      'faq.q4s': 'Do I need to reboot?', 'faq.q4p': 'Only if Windows asks after installing the virtual cable. The app offers it and resumes the setup after the reboot.',
+      'faq.q5s': 'Does the overlay work fullscreen?', 'faq.q5p': 'With the game in <strong>borderless fullscreen</strong>. Ctrl+Alt hotkeys always work.',
+      'faq.q6s': 'How does it update?', 'faq.q6p': 'From Settings → Updates: the preset library updates inside the app, new app versions download from here.',
+      'faq.q7s': "I can't hear the game, what do I check?", 'faq.q7p': 'Open Setup: each step shows what is missing. Usually it is the game audio device, which must be CABLE Input.',
+      'final.h2': 'Ready in five minutes.', 'final.btn': 'Download BOOST TATTIC',
+      'final.p': 'Windows 10/11 64-bit', 'final.all': 'all versions', 'final.code': 'code on GitHub',
+      'foot.a': 'BOOST TATTIC — personal open-source project, non-commercial. Not affiliated with Activision.', 'foot.lic': 'Licenses'
     }
   };
 
-  function verText(l) {
-    if (window.__ver) return (l === 'it' ? 'ultima ' : 'latest ') + window.__ver;
-    return l === 'it' ? 'ultima versione in arrivo…' : 'latest release coming…';
-  }
-
   function setLang(l) {
-    var d = DICT[l] || DICT.en;
+    var d = DICT[l] || DICT.it;
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var v = d[el.getAttribute('data-i18n')];
-      if (v == null) return;
-      if (el.id === 'verline') el.innerHTML = v.replace('{ver}', '<span id="ver">' + verText(l) + '</span>');
-      else el.innerHTML = v;
+      if (v != null) el.innerHTML = v;
     });
     document.documentElement.lang = l;
     document.querySelectorAll('.lang').forEach(function (b) { b.classList.toggle('active', b.id === 'lang-' + l); });
-    try { localStorage.setItem('tattic-lang', l); } catch (e) { /* privato */ }
+    try { localStorage.setItem('tattic-lang', l); } catch (e) { /* navigazione privata */ }
     window.__lang = l;
+    if (window.__onLang) window.__onLang(l);
   }
 
+  window.__t = function (k) { return (DICT[window.__lang] || DICT.it)[k] || ''; };
   document.getElementById('lang-it').addEventListener('click', function () { setLang('it'); });
   document.getElementById('lang-en').addEventListener('click', function () { setLang('en'); });
-  var start = 'en';
-  try { start = localStorage.getItem('tattic-lang') || (((navigator.language || 'en').toLowerCase().indexOf('it') === 0) ? 'it' : 'en'); } catch (e) { /* default en */ }
+  var start = 'it';
+  try { start = localStorage.getItem('tattic-lang') || (((navigator.language || 'it').toLowerCase().indexOf('it') === 0) ? 'it' : 'en'); } catch (e) { /* predefinito */ }
   setLang(start);
-  window.__setLang = setLang;
 })();

@@ -74,6 +74,13 @@ a{color:var(--teal)}
 .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
 .shot .ph{aspect-ratio:16/10;border:2px dashed var(--teal-dim);border-radius:14px;display:grid;place-items:center;background:rgba(90,191,198,.05);color:var(--teal);font-family:var(--cond);font-size:1.4rem;text-transform:uppercase;letter-spacing:.1em}
 .shot figcaption{color:var(--muted);font-size:.92rem;margin-top:.5rem;text-align:center}
+/* VALORI */
+.valori-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.valori-grid img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+.ticks{list-style:none;margin-top:1rem;display:grid;gap:.8rem}
+.ticks li{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:.9rem 1.1rem;color:#cfcabf}
+.ticks strong{color:var(--gold);font-family:var(--cond);text-transform:uppercase;letter-spacing:.06em}
+@media(max-width:860px){.valori-grid{grid-template-columns:1fr}}
 /* FLUSSO */
 .flow{margin-top:1.4rem}
 .flow img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.5)}

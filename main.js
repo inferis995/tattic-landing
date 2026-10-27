@@ -19,7 +19,7 @@
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (j) {
       var el = document.getElementById('ver');
-      if (el && j.tag_name) el.textContent = 'ultima release ' + j.tag_name;
+      if (el && j.tag_name) el.textContent = 'latest ' + j.tag_name;
     })
     .catch(function () { /* resta "in arrivo" */ });
 

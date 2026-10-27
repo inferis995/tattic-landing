@@ -62,6 +62,7 @@ a{color:var(--teal)}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.4rem;transition:border-color .2s,transform .2s}
 .card:hover{border-color:var(--teal-dim);transform:translateY(-2px)}
 .card h3{color:var(--gold);margin-bottom:.5rem}
+.bic{width:34px;height:34px;color:var(--gold);margin-bottom:.4rem;display:block}
 .card p{color:#cfcabf;font-size:.98rem}
 .turn{margin-top:1.6rem;font-size:1.15rem;border-left:3px solid var(--teal);padding-left:1.1rem;color:#d8d3c6}
 .turn strong{color:var(--teal)}

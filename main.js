@@ -14,14 +14,21 @@
     });
   }
 
-  /* Versione live da GitHub (fallisce silenzioso: resta il fallback) */
+  /* Versione live + download diretto dell'exe (fallback: pagina release) */
   fetch('https://api.github.com/repos/inferis995/tattic/releases/latest')
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (j) {
-      var el = document.getElementById('ver');
-      if (el && j.tag_name) el.textContent = 'latest ' + j.tag_name;
+      if (j.tag_name) {
+        window.__ver = j.tag_name;
+        var el = document.getElementById('ver');
+        if (el) el.textContent = ((window.__lang === 'it') ? 'ultima ' : 'latest ') + j.tag_name;
+        var exe = (j.assets || []).filter(function (a) { return /\.exe$/i.test(a.name); })[0];
+        if (exe) {
+          document.querySelectorAll('[data-dl]').forEach(function (a) { a.href = exe.browser_download_url; });
+        }
+      }
     })
-    .catch(function () { /* resta "in arrivo" */ });
+    .catch(function () { /* resta il fallback */ });
 
   /* Reveal on scroll (GSAP se disponibile, altrimenti tutto visibile) */
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

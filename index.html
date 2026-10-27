@@ -28,7 +28,7 @@
 </script>
 </head>
 <body>
-<a class="skip" href="#download">Go to download</a>
+<a class="skip" href="#download" data-i18n="skip">Go to download</a>
 
 <header class="nav" id="top">
   <a class="brand" href="#top" aria-label="BOOST TATTIC home">
@@ -36,12 +36,16 @@
     <span>BOOST <strong>TATTIC</strong></span>
   </a>
   <nav class="links" aria-label="Navigation">
-    <a href="#why">Why</a>
-    <a href="#how">How it works</a>
-    <a href="#guide">Guide</a>
+    <a href="#why" data-i18n="nav.why">Why</a>
+    <a href="#how" data-i18n="nav.how">How it works</a>
+    <a href="#guide" data-i18n="nav.guide">Guide</a>
     <a href="#faq">FAQ</a>
   </nav>
-  <a class="btn small" id="nav-dl" href="https://github.com/inferis995/tattic/releases/latest">Download</a>
+  <div class="langsel" role="group" aria-label="Language">
+    <button class="lang" id="lang-it" type="button">IT</button>
+    <button class="lang active" id="lang-en" type="button">EN</button>
+  </div>
+  <a class="btn small" id="nav-dl" href="https://github.com/inferis995/tattic/releases/latest" data-i18n="nav.dl">Download</a>
   <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
 </header>
 
@@ -52,60 +56,60 @@
   <div class="hero-poster" aria-hidden="true"></div>
   <div class="hero-inner">
     <img class="hero-logo" src="assets/logo.jpg" alt="BOOST TATTIC emblem" width="220" height="120">
-    <p class="kicker">Windows app · free · open source</p>
-    <h1>Hear everything.<br><span>Before anyone.</span></h1>
-    <p class="sub">BOOST TATTIC is the free Windows app that cleans up Warzone and MW4 audio: footsteps, reloads and enemy voices up front. <strong>Boost Audio AI Engine</strong> at 16 channels, competitive presets and automatic EQ for <em>your</em> headphones.</p>
+    <p class="kicker" data-i18n="hero.kicker">Windows app · free · open source</p>
+    <h1 data-i18n="hero.title">Hear everything.<br><span>Before anyone.</span></h1>
+    <p class="sub" data-i18n="hero.sub">BOOST TATTIC is the free Windows app that cleans up Warzone and MW4 audio: footsteps, reloads and enemy voices up front. <strong>Boost Audio AI Engine</strong> at 16 channels, competitive presets and automatic EQ for <em>your</em> headphones.</p>
     <div class="cta-row" id="download">
-      <a class="btn big" href="https://github.com/inferis995/tattic/releases/latest">⬇ Download for Windows</a>
-      <a class="btn ghost" href="#guide">Install guide</a>
+      <a class="btn big" data-dl href="https://github.com/inferis995/tattic/releases/latest" data-i18n="hero.dl">⬇ Download for Windows</a>
+      <a class="btn ghost" href="#guide" data-i18n="hero.guide">Install guide</a>
     </div>
-    <p class="micro" id="verline">Free · Open source · Windows 10/11 64-bit · <span id="ver">latest release coming…</span></p>
+    <p class="micro" id="verline" data-i18n="hero.micro">Free · Open source · Windows 10/11 64-bit · <span id="ver">latest release coming…</span></p>
   </div>
   <div class="hero-stats" aria-label="Key numbers">
-    <div><strong>16</strong><span>audio channels</span></div>
-    <div><strong>302</strong><span>Boost Engine params</span></div>
-    <div><strong>6,797</strong><span>headphone measurements</span></div>
-    <div><strong>$0</strong><span>forever</span></div>
+    <div><strong>16</strong><span data-i18n="stats.s1">audio channels</span></div>
+    <div><strong>302</strong><span data-i18n="stats.s2">Boost Engine params</span></div>
+    <div><strong>6,797</strong><span data-i18n="stats.s3">headphone measurements</span></div>
+    <div><strong>$0</strong><span data-i18n="stats.s4">forever</span></div>
   </div>
 </section>
 
 <!-- PROBLEMA → SOLUZIONE -->
 <section class="band" id="why">
   <div class="wrap">
-    <p class="kicker gold">The problem</p>
-    <h2>Stock audio loses you the fights that matter.</h2>
+    <p class="kicker gold" data-i18n="why.kicker">The problem</p>
+    <h2 data-i18n="why.h2">Stock audio loses you the fights that matter.</h2>
     <div class="cols3">
-      <div class="card"><h3>Buried footsteps</h3><p>Your gun, bombardments and wash cover enemy footsteps exactly when you must decide to push or not.</p></div>
-      <div class="card"><h3>Uncalibrated headphones</h3><p>Every headphone colors sound its own way: without EQ you hear a distorted version of the battlefield.</p></div>
-      <div class="card"><h3>Fragile setups</h3><p>Voicemeeter and EQ chains that break at every Windows update, with extra latency on top.</p></div>
+      <div class="card"><h3 data-i18n="why.c1h">Buried footsteps</h3><p data-i18n="why.c1p">Your gun, bombardments and wash cover enemy footsteps exactly when you must decide to push or not.</p></div>
+      <div class="card"><h3 data-i18n="why.c2h">Uncalibrated headphones</h3><p data-i18n="why.c2p">Every headphone colors sound its own way: without EQ you hear a distorted version of the battlefield.</p></div>
+      <div class="card"><h3 data-i18n="why.c3h">Fragile setups</h3><p data-i18n="why.c3p">Voicemeeter and EQ chains that break at every Windows update, with extra latency on top.</p></div>
     </div>
-    <p class="turn">It's not your hearing, it's the game's mix. <strong>One 16-channel engine</strong> separates sounds before they reach your headphones — footsteps, gunfire, ambience — lifts what matters and tames the rest. You decide how much.</p>
+    <p class="turn" data-i18n="why.turn">It's not your hearing, it's the game's mix. <strong>One 16-channel engine</strong> separates sounds before they reach your headphones — footsteps, gunfire, ambience — lifts what matters and tames the rest. You decide how much.</p>
   </div>
 </section>
 
 <!-- BENEFICI -->
 <section class="wrap" id="benefits">
-  <p class="kicker gold">Benefits</p>
-  <h2>Built for players who compete.</h2>
+  <p class="kicker gold" data-i18n="ben.kicker">Benefits</p>
+  <h2 data-i18n="ben.h2">Built for players who compete.</h2>
   <div class="cols3">
-    <div class="card"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="12" r="5.4" opacity=".65"/><circle cx="12" cy="12" r="8.6" opacity=".35"/></svg><h3>Footsteps first</h3><p><strong>Enemies arrive on time</strong> — the Recon profile lifts enemy footsteps 3 dB while cutting the rest.</p></div>
-    <div class="card"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 8l5 8M22 8l-5 8"/></svg><h3>Your gun stays quiet</h3><p><strong>Foreign gunfire tamed up to 16 dB</strong> — stay composed even in close squad fights.</p></div>
-    <div class="card"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 15v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="7" rx="1.6"/><rect x="17" y="14" width="4" height="7" rx="1.6"/></svg><h3>EQ for your headphones</h3><p><strong>Real calibration, not generic presets</strong> — 68 ready EQs + a 6,797-measurement database.</p></div>
-    <div class="card"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12L4 7.5M12 12v9"/></svg><h3>One app does it all</h3><p><strong>No Voicemeeter, no APO</strong> — mixer, engine, tray and Windows autostart built in.</p></div>
-    <div class="card"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></svg><h3>Overlay + hotkeys</h3><p><strong>Switch presets without leaving the game</strong> — transparent overlay and Ctrl+Alt for weapon, style, volume and boost up to +12 dB.</p></div>
-    <div class="card"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 2v3M14 2v3M10 19v3M14 19v3M2 10h3M2 14h3M19 10h3M19 14h3"/></svg><h3>Boost Audio AI Engine</h3><p><strong>302 parameters reasoning about sound</strong> — separates footsteps, gunfire and ambience and rebalances them in real time.</p></div>
+    <div class="card"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="12" r="5.4" opacity=".65"/><circle cx="12" cy="12" r="8.6" opacity=".35"/></svg><h3 data-i18n="ben.b1h">Footsteps first</h3><p data-i18n="ben.b1p"><strong>Enemies arrive on time</strong> — the Recon profile lifts enemy footsteps 3 dB while cutting the rest.</p></div>
+    <div class="card"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 8l5 8M22 8l-5 8"/></svg><h3 data-i18n="ben.b2h">Your gun stays quiet</h3><p data-i18n="ben.b2p"><strong>Foreign gunfire tamed up to 16 dB</strong> — stay composed even in close squad fights.</p></div>
+    <div class="card"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 15v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="7" rx="1.6"/><rect x="17" y="14" width="4" height="7" rx="1.6"/></svg><h3 data-i18n="ben.b3h">EQ for your headphones</h3><p data-i18n="ben.b3p"><strong>Real calibration, not generic presets</strong> — 68 ready EQs + a 6,797-measurement database.</p></div>
+    <div class="card"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12L4 7.5M12 12v9"/></svg><h3 data-i18n="ben.b4h">One app does it all</h3><p data-i18n="ben.b4p"><strong>No Voicemeeter, no APO</strong> — mixer, engine, tray and Windows autostart built in.</p></div>
+    <div class="card"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></svg><h3 data-i18n="ben.b5h">Overlay + hotkeys</h3><p data-i18n="ben.b5p"><strong>Switch presets without leaving the game</strong> — transparent overlay and Ctrl+Alt for weapon, style, volume and boost up to +12 dB.</p></div>
+    <div class="card"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 2v3M14 2v3M10 19v3M14 19v3M2 10h3M2 14h3M19 10h3M19 14h3"/></svg><h3 data-i18n="ben.b6h">Boost Audio AI Engine</h3><p data-i18n="ben.b6p"><strong>302 parameters reasoning about sound</strong> — separates footsteps, gunfire and ambience and rebalances them in real time.</p></div>
   </div>
 </section>
 
 <!-- COME FUNZIONA -->
 <section class="band" id="how">
   <div class="wrap">
-    <p class="kicker gold">How it works</p>
-    <h2>Three steps and you're in the match.</h2>
+    <p class="kicker gold" data-i18n="how.kicker">How it works</p>
+    <h2 data-i18n="how.h2">Three steps and you're in the match.</h2>
     <ol class="steps">
-      <li><span class="n">1</span><div><h3>Install</h3><p>Download the exe, install it, add the free VB-CABLE virtual cable. The guide below walks you through.</p></div></li>
-      <li><span class="n">2</span><div><h3>Route</h3><p>In-game, pick TATTIC as audio output; Discord and browser stay straight on the headphones.</p></div></li>
-      <li><span class="n">3</span><div><h3>Dominate</h3><p>Pick a preset (start with ClassicPlus-UltraLo), calibrate the EQ on your headphones and play.</p></div></li>
+      <li><span class="n">1</span><div><h3 data-i18n="how.s1h">Install</h3><p data-i18n="how.s1p">Download the exe, install it, add the free VB-CABLE virtual cable. The guide below walks you through.</p></div></li>
+      <li><span class="n">2</span><div><h3 data-i18n="how.s2h">Route</h3><p data-i18n="how.s2p">In-game, pick TATTIC as audio output; Discord and browser stay straight on the headphones.</p></div></li>
+      <li><span class="n">3</span><div><h3 data-i18n="how.s3h">Dominate</h3><p data-i18n="how.s3p">Pick a preset (start with ClassicPlus-UltraLo), calibrate the EQ on your headphones and play.</p></div></li>
     </ol>
   </div>
 </section>
@@ -116,12 +120,12 @@
     <div class="valori-grid">
       <img src="assets/badge.jpg" alt="Precise, Functional, Resistant — the three BOOST TATTIC principles" loading="lazy">
       <div>
-        <p class="kicker gold">Character</p>
-        <h2>Precise. Functional.<br>Resistant.</h2>
+        <p class="kicker gold" data-i18n="val.kicker">Character</p>
+        <h2 data-i18n="val.h2">Precise. Functional.<br>Resistant.</h2>
         <ul class="ticks">
-          <li><strong>Precise</strong> — every footstep in place, every dB under control.</li>
-          <li><strong>Functional</strong> — one tool that does everything, no fragile chains.</li>
-          <li><strong>Resistant</strong> — a setup that survives patches, seasons and meta shifts.</li>
+          <li data-i18n="val.t1"><strong>Precise</strong> — every footstep in place, every dB under control.</li>
+          <li data-i18n="val.t2"><strong>Functional</strong> — one tool that does everything, no fragile chains.</li>
+          <li data-i18n="val.t3"><strong>Resistant</strong> — a setup that survives patches, seasons and meta shifts.</li>
         </ul>
       </div>
     </div>
@@ -131,19 +135,19 @@
 <!-- GUIDE -->
 <section class="wrap narrow" id="guide">
   <div>
-    <p class="kicker gold">Install guide</p>
-    <h2>From zero to in-game in ten minutes.</h2>
+    <p class="kicker gold" data-i18n="guide.kicker">Install guide</p>
+    <h2 data-i18n="guide.h2">From zero to in-game in ten minutes.</h2>
     <ol class="guide">
-      <li><h3>Download the installer</h3><p>Hit <strong>Download for Windows</strong> above: the latest GitHub release opens with the <code>.exe</code>. Run it and finish the install.</p></li>
-      <li><h3>Install VB-CABLE</h3><p>Download <strong>VB-CABLE Virtual Audio Device</strong> (free, vb-audio.com), install it and reboot. The app renames it to <strong>TATTIC</strong> by itself.</p></li>
-      <li><h3>Set up the game</h3><p>In Warzone: audio output to <strong>TATTIC</strong>, 16 channels at 48 kHz. Discord, browser and system sounds stay on the real headphones: Windows mixes them.</p></li>
-      <li><h3>Start the audio</h3><p>Open BOOST TATTIC, pick the headphones as output and press <strong>Start audio</strong>: you should see channels moving already in the lobby. From here it lives in the system tray and starts with Windows.</p></li>
-      <li><h3>Pick the preset</h3><p>Start with <strong>ClassicPlus-UltraLo</strong>, then try the TATTIC 1 styles (Recon recommended for footsteps). Weapon level with <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1</kbd>…<kbd>5</kbd>.</p></li>
-      <li><h3>Overlay and hotkeys</h3><p>Enable the overlay in Settings (needs the game in <strong>borderless fullscreen</strong>). Quick memo: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>O</kbd> overlay, <kbd>B</kbd> bypass, <kbd>↑</kbd><kbd>↓</kbd> volume, <kbd>PgUp</kbd><kbd>PgDn</kbd> boost.</p></li>
+      <li><h3 data-i18n="guide.g1h">Download the installer</h3><p data-i18n="guide.g1p">Hit <strong>Download for Windows</strong> above: the latest GitHub release opens with the <code>.exe</code>. Run it and finish the install.</p></li>
+      <li><h3 data-i18n="guide.g2h">Install VB-CABLE</h3><p data-i18n="guide.g2p">Download <strong>VB-CABLE Virtual Audio Device</strong> (free, vb-audio.com), install it and reboot. The app renames it to <strong>TATTIC</strong> by itself.</p></li>
+      <li><h3 data-i18n="guide.g3h">Set up the game</h3><p data-i18n="guide.g3p">In Warzone: audio output to <strong>TATTIC</strong>, 16 channels at 48 kHz. Discord, browser and system sounds stay on the real headphones: Windows mixes them.</p></li>
+      <li><h3 data-i18n="guide.g4h">Start the audio</h3><p data-i18n="guide.g4p">Open BOOST TATTIC, pick the headphones as output and press <strong>Start audio</strong>: you should see channels moving already in the lobby. From here it lives in the system tray and starts with Windows.</p></li>
+      <li><h3 data-i18n="guide.g5h">Pick the preset</h3><p data-i18n="guide.g5p">Start with <strong>ClassicPlus-UltraLo</strong>, then try the TATTIC 1 styles (Recon recommended for footsteps). Weapon level with <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1</kbd>…<kbd>5</kbd>.</p></li>
+      <li><h3 data-i18n="guide.g6h">Overlay and hotkeys</h3><p data-i18n="guide.g6p">Enable the overlay in Settings (needs the game in <strong>borderless fullscreen</strong>). Quick memo: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>O</kbd> overlay, <kbd>B</kbd> bypass, <kbd>↑</kbd><kbd>↓</kbd> volume, <kbd>PgUp</kbd><kbd>PgDn</kbd> boost.</p></li>
     </ol>
     <div class="req">
-      <div><h4>Requirements</h4><p>Windows 10/11 64-bit · any headphones · VB-CABLE (free) · ~150 MB free</p></div>
-      <div><h4>Not needed</h4><p>Voicemeeter · Equalizer APO · dedicated sound card · account · credit card</p></div>
+      <div><h4 data-i18n="guide.req1h">Requirements</h4><p data-i18n="guide.req1p">Windows 10/11 64-bit · any headphones · VB-CABLE (free) · ~150 MB free</p></div>
+      <div><h4 data-i18n="guide.req2h">Not needed</h4><p data-i18n="guide.req2p">Voicemeeter · Equalizer APO · dedicated sound card · account · credit card</p></div>
     </div>
   </div>
 </section>
@@ -151,17 +155,17 @@
 <!-- FAQ -->
 <section class="band" id="faq">
   <div class="wrap narrow">
-    <p class="kicker gold">FAQ</p>
-    <h2>Clear before you download.</h2>
+    <p class="kicker gold" data-i18n="faq.kicker">FAQ</p>
+    <h2 data-i18n="faq.h2">Clear before you download.</h2>
     <div class="faq">
-      <details open><summary>Is it really free?</summary><p>Yes. Free and open source, no account or subscription. The only external software, VB-CABLE, is free for personal use.</p></details>
-      <details><summary>Will I get banned?</summary><p>No: BOOST TATTIC doesn't modify the game, inject code or read its memory — it only processes Windows audio output like a virtual mixer. Activision has the final say, as always.</p></details>
-      <details><summary>Does it work with my headphones?</summary><p>Yes, with any headphones: 68 ready EQs plus a 6,797-measurement database to calibrate yours.</p></details>
-      <details><summary>Do I need a special sound card?</summary><p>No. Windows 10/11 64-bit and any headphones are enough. Everything else is software.</p></details>
-      <details><summary>Does the overlay work fullscreen?</summary><p>It works with the game in <strong>borderless fullscreen</strong>, not exclusive fullscreen. <kbd>Ctrl</kbd>+<kbd>Alt</kbd> hotkeys always work.</p></details>
-      <details><summary>Do I need Voicemeeter?</summary><p>No. BOOST TATTIC does it all: mixer, engine, tray, autostart. No Voicemeeter, no Equalizer APO.</p></details>
-      <details><summary>How do I get updates?</summary><p>From the app's Updates page: the preset library updates from there, for the app download the new GitHub release.</p></details>
-      <details><summary>I hear nothing, what do I check?</summary><p>Three things, in order: output to TATTIC in the game; Start audio in the app; virtual cable at 16 channels and 48 kHz.</p></details>
+      <details open><summary data-i18n="faq.q1s">Is it really free?</summary><p data-i18n="faq.q1p">Yes. Free and open source, no account or subscription. The only external software, VB-CABLE, is free for personal use.</p></details>
+      <details><summary data-i18n="faq.q2s">Will I get banned?</summary><p data-i18n="faq.q2p">No: BOOST TATTIC doesn't modify the game, inject code or read its memory — it only processes Windows audio output like a virtual mixer. Activision has the final say, as always.</p></details>
+      <details><summary data-i18n="faq.q3s">Does it work with my headphones?</summary><p data-i18n="faq.q3p">Yes, with any headphones: 68 ready EQs plus a 6,797-measurement database to calibrate yours.</p></details>
+      <details><summary data-i18n="faq.q4s">Do I need a special sound card?</summary><p data-i18n="faq.q4p">No. Windows 10/11 64-bit and any headphones are enough. Everything else is software.</p></details>
+      <details><summary data-i18n="faq.q5s">Does the overlay work fullscreen?</summary><p data-i18n="faq.q5p">It works with the game in <strong>borderless fullscreen</strong>, not exclusive fullscreen. <kbd>Ctrl</kbd>+<kbd>Alt</kbd> hotkeys always work.</p></details>
+      <details><summary data-i18n="faq.q6s">Do I need Voicemeeter?</summary><p data-i18n="faq.q6p">No. BOOST TATTIC does it all: mixer, engine, tray, autostart. No Voicemeeter, no Equalizer APO.</p></details>
+      <details><summary data-i18n="faq.q7s">How do I get updates?</summary><p data-i18n="faq.q7p">From the app's Updates page: the preset library updates from there, for the app download the new GitHub release.</p></details>
+      <details><summary data-i18n="faq.q8s">I hear nothing, what do I check?</summary><p data-i18n="faq.q8p">Three things, in order: output to TATTIC in the game; Start audio in the app; virtual cable at 16 channels and 48 kHz.</p></details>
     </div>
   </div>
 </section>
@@ -170,16 +174,16 @@
 <section class="final">
   <div class="wrap narrow">
     <img src="assets/logo.jpg" alt="BOOST TATTIC emblem" width="140" height="76" loading="lazy">
-    <h2>Install in 5 minutes,<br>feel it from the first fight.</h2>
-    <a class="btn big" href="https://github.com/inferis995/tattic/releases/latest">⬇ Download BOOST TATTIC free</a>
-    <p class="muted">Windows 10/11 64-bit · open source · <a href="https://github.com/inferis995/tattic">code on GitHub</a></p>
+    <h2 data-i18n="final.h2">Install in 5 minutes,<br>feel it from the first fight.</h2>
+    <a class="btn big" data-dl href="https://github.com/inferis995/tattic/releases/latest" data-i18n="final.btn">⬇ Download BOOST TATTIC free</a>
+    <p class="muted" data-i18n="final.p">Windows 10/11 64-bit · open source · <a href="https://github.com/inferis995/tattic">code on GitHub</a></p>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="wrap foot">
-    <span>BOOST TATTIC — personal open-source project, non-commercial.</span>
+    <span data-i18n="foot.a">BOOST TATTIC — personal open-source project, non-commercial.</span>
     <span><a href="https://github.com/inferis995/tattic">GitHub</a></span>
   </div>
 </footer>
@@ -188,6 +192,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="hero3d.js"></script>
+<script src="i18n.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOOST TATTIC – Audio competitivo gratis per Warzone e MW4</title>
+<meta name="description" content="BOOST TATTIC: app gratis per Windows con preset competitivi, EQ cuffie automatico e overlay per Warzone e MW4.">
+<meta property="og:title" content="BOOST TATTIC — Senti tutto. Prima di tutti.">
+<meta property="og:description" content="App Windows gratuita: audio Warzone a 16 canali, preset competitivi, EQ cuffia, overlay in gioco.">
+<meta property="og:image" content="assets/logo.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"BOOST TATTIC è gratis?","acceptedAnswer":{"@type":"Answer","text":"Sì, gratis e open source. L'unico software esterno richiesto è VB-CABLE, gratuito per uso personale."}},
+{"@type":"Question","name":"Rischio il ban usando BOOST TATTIC?","acceptedAnswer":{"@type":"Answer","text":"No: non tocca i file di gioco né la memoria del gioco, elabora solo l'audio in uscita verso le cuffie. Resta comunque una valutazione di Activision."}},
+{"@type":"Question","name":"Funziona con le mie cuffie?","acceptedAnswer":{"@type":"Answer","text":"Sì: include 68 EQ pronti e un database di 6797 misure per calibrare la risposta sulle tue cuffie."}},
+{"@type":"Question","name":"Serve una scheda audio particolare?","acceptedAnswer":{"@type":"Answer","text":"No. Basta Windows 10/11 a 64 bit, un paio di cuffie e il cavo virtuale VB-CABLE (gratuito)."}},
+{"@type":"Question","name":"L'overlay funziona in schermo intero?","acceptedAnswer":{"@type":"Answer","text":"Funziona con il gioco in schermo intero senza bordi, non in schermo intero esclusivo."}},
+{"@type":"Question","name":"Serve Voicemeeter o Equalizer APO?","acceptedAnswer":{"@type":"Answer","text":"No: BOOST TATTIC fa tutto da solo, senza Voicemeeter né Equalizer APO."}},
+{"@type":"Question","name":"Come ricevo gli aggiornamenti?","acceptedAnswer":{"@type":"Answer","text":"Dall'app, pagina Aggiornamenti: la libreria preset si aggiorna da lì, per l'app si scarica la nuova release."}},
+{"@type":"Question","name":"Non sento nulla, cosa controllo?","acceptedAnswer":{"@type":"Answer","text":"Nel gioco scegli TATTIC come dispositivo audio, nell'app premi Avvia audio e controlla che il cavo virtuale sia a 16 canali e 48 kHz."}}
+]}
+</script>
+</head>
+<body>
+<a class="skip" href="#download">Vai al download</a>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top" aria-label="BOOST TATTIC home">
+    <img src="assets/logo.jpg" alt="Logo BOOST TATTIC" width="40" height="40">
+    <span>BOOST <strong>TATTIC</strong></span>
+  </a>
+  <nav class="links" aria-label="Navigazione">
+    <a href="#perche">Perché</a>
+    <a href="#come">Come funziona</a>
+    <a href="#guida">Guida</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="btn small" id="nav-dl" href="https://github.com/inferis995/tattic/releases/latest">Scarica</a>
+  <button class="burger" aria-label="Apri menu" aria-expanded="false">☰</button>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" aria-label="Presentazione">
+  <canvas id="hero3d" aria-hidden="true"></canvas>
+  <div class="hero-poster" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <img class="hero-logo" src="assets/logo.jpg" alt="Emblema BOOST TATTIC" width="220" height="120">
+    <p class="kicker">App Windows · gratis · open source</p>
+    <h1>Senti tutto.<br><span>Prima di tutti.</span></h1>
+    <p class="sub">BOOST TATTIC è l'app gratis per Windows che ripulisce l'audio di Warzone e MW4: passi, ricariche e voci nemiche davanti a tutto. Motore a 16 canali, preset competitivi ed EQ automatico per le <em>tue</em> cuffie.</p>
+    <div class="cta-row" id="download">
+      <a class="btn big" href="https://github.com/inferis995/tattic/releases/latest">⬇ Scarica per Windows</a>
+      <a class="btn ghost" href="#guida">Guida installazione</a>
+    </div>
+    <p class="micro" id="verline">Gratis · Open source · Windows 10/11 64-bit · <span id="ver">ultima versione in arrivo…</span></p>
+  </div>
+  <div class="hero-stats" aria-label="Numeri chiave">
+    <div><strong>16</strong><span>canali audio</span></div>
+    <div><strong>302</strong><span>parametri motore</span></div>
+    <div><strong>6.797</strong><span>misure cuffie</span></div>
+    <div><strong>0 €</strong><span>per sempre</span></div>
+  </div>
+</section>
+
+<!-- PROBLEMA → SOLUZIONE -->
+<section class="band" id="perche">
+  <div class="wrap">
+    <p class="kicker gold">Il problema</p>
+    <h2>L'audio stock ti fa perdere i fight che contano.</h2>
+    <div class="cols3">
+      <div class="card"><h3>Passi coperti</h3><p>Il tuo sparo, i bombardamenti e il wash coprono i passi nemici proprio quando devi decidere se pushare o no.</p></div>
+      <div class="card"><h3>Cuffie non calibrate</h3><p>Ogni cuffia colora il suono a modo suo: senza EQ senti una versione falsata del campo di battaglia.</p></div>
+      <div class="card"><h3>Setup fragili</h3><p>Catene di Voicemeeter ed EQ che si rompono a ogni aggiornamento di Windows, con latenza in più.</p></div>
+    </div>
+    <p class="turn">Non è il tuo udito, è il mix del gioco. <strong>Un solo motore a 16 canali</strong> separa i suoni prima che arrivino alle cuffie — passi, spari, ambiente — alza ciò che conta e abbassa il resto. Tu decidi solo quanto.</p>
+  </div>
+</section>
+
+<!-- BENEFICI -->
+<section class="wrap" id="benefici">
+  <p class="kicker gold">Benefici</p>
+  <h2>Costruito per chi gioca sul serio.</h2>
+  <div class="cols3">
+    <div class="card"><h3>👣 Passi in primo piano</h3><p><strong>Il nemico si sente arrivare</strong> — il profilo Recon alza i passi nemici di 3 dB tagliando il resto.</p></div>
+    <div class="card"><h3>🔇 Il tuo sparo non ti assorda</h3><p><strong>Spari altrui domati fino a 16 dB</strong> — resti lucido anche negli scontri a squadre ravvicinati.</p></div>
+    <div class="card"><h3>🎧 EQ sulle tue cuffie</h3><p><strong>Calibrazione reale, non preset generici</strong> — 68 EQ pronti + database di 6.797 misure.</p></div>
+    <div class="card"><h3>📦 Tutto in una sola app</h3><p><strong>Niente Voicemeeter, niente APO</strong> — mixer, motore, tray e avvio con Windows integrati.</p></div>
+    <div class="card"><h3>🖥 Overlay + hotkey</h3><p><strong>Cambia preset senza uscire dal gioco</strong> — overlay trasparente e Ctrl+Alt per arma, stile, volume e boost fino a +12 dB.</p></div>
+    <div class="card"><h3>🔓 Gratis, per davvero</h3><p><strong>Open source, senza account né abbonamenti</strong> — libreria preset sotto CC BY-NC-SA 4.0.</p></div>
+  </div>
+</section>
+
+<!-- COME FUNZIONA -->
+<section class="band" id="come">
+  <div class="wrap">
+    <p class="kicker gold">Come funziona</p>
+    <h2>Tre passi e sei in partita.</h2>
+    <ol class="steps">
+      <li><span class="n">1</span><div><h3>Installa</h3><p>Scarica l'exe, installa, aggiungi il cavo virtuale gratuito VB-CABLE. La guida sotto ti porta per mano.</p></div></li>
+      <li><span class="n">2</span><div><h3>Instrada</h3><p>Nel gioco scegli TATTIC come uscita audio; Discord e browser restano diretti alle cuffie.</p></div></li>
+      <li><span class="n">3</span><div><h3>Domina</h3><p>Scegli il preset (parti da ClassicPlus-UltraLo), calibra l'EQ sulle tue cuffie e gioca.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- SCREENSHOT -->
+<section class="wrap" id="screen">
+  <p class="kicker gold">L'app</p>
+  <h2>Un pannello, zero sbatti.</h2>
+  <p class="muted">Screenshot reali in arrivo — intanto ecco dove finirà ogni schermata.</p>
+  <div class="shots">
+    <figure class="shot"><div class="ph"><span>Pannello</span></div><figcaption>Preset, livelli e stato audio a colpo d'occhio.</figcaption></figure>
+    <figure class="shot"><div class="ph"><span>EQ cuffia</span></div><figcaption>Calibrazione con curva misurata vs target.</figcaption></figure>
+    <figure class="shot"><div class="ph"><span>Overlay</span></div><figcaption>Preset, volume e attività motore sopra il gioco.</figcaption></figure>
+  </div>
+</section>
+
+<!-- GUIDA -->
+<section class="band" id="guida">
+  <div class="wrap narrow">
+    <p class="kicker gold">Guida installazione</p>
+    <h2>Da zero a in-game in dieci minuti.</h2>
+    <ol class="guide">
+      <li><h3>Scarica l'installer</h3><p>Premi <strong>Scarica per Windows</strong> qui sopra: si apre l'ultima release GitHub con il file <code>.exe</code>. Eseguilo e completa l'installazione.</p></li>
+      <li><h3>Installa VB-CABLE</h3><p>Scarica <strong>VB-CABLE Virtual Audio Device</strong> (gratuito, vb-audio.com), installalo e riavvia. L'app lo rinomina in <strong>TATTIC</strong> da sola.</p></li>
+      <li><h3>Imposta il gioco</h3><p>In Warzone: audio in uscita su <strong>TATTIC</strong>, 16 canali a 48 kHz. Discord, browser e suoni di sistema restano sulle cuffie vere: li mescola Windows.</p></li>
+      <li><h3>Avvia l'audio</h3><p>Apri BOOST TATTIC, scegli le cuffie in uscita e premi <strong>Avvia audio</strong>: devi vedere i canali muoversi già in lobby. Da qui resta nella barra di sistema e parte con Windows.</p></li>
+      <li><h3>Scegli il preset</h3><p>Parti da <strong>ClassicPlus-UltraLo</strong>, poi prova gli stili TATTIC 1 (Recon consigliato per i passi). Livello arma con <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1</kbd>…<kbd>5</kbd>.</p></li>
+      <li><h3>Overlay e tasti</h3><p>Attiva l'overlay da Impostazioni (serve gioco in <strong>schermo intero senza bordi</strong>). Memo rapido: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>O</kbd> overlay, <kbd>B</kbd> bypass, <kbd>↑</kbd><kbd>↓</kbd> volume, <kbd>PagSu</kbd><kbd>PagGiù</kbd> boost.</p></li>
+    </ol>
+    <div class="req">
+      <div><h4>Requisiti</h4><p>Windows 10/11 64-bit · cuffie qualsiasi · VB-CABLE (gratis) · ~150 MB liberi</p></div>
+      <div><h4>Non serve</h4><p>Voicemeeter · Equalizer APO · scheda audio dedicata · account · carta di credito</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="wrap narrow" id="faq">
+  <p class="kicker gold">Domande frequenti</p>
+  <h2>Chiaro prima di scaricare.</h2>
+  <div class="faq">
+    <details open><summary>È davvero gratis?</summary><p>Sì. Gratis e open source, senza account né abbonamento. L'unico software esterno, VB-CABLE, è gratuito per uso personale.</p></details>
+    <details><summary>Rischio il ban?</summary><p>No: BOOST TATTIC non modifica il gioco, non inietta codice e non ne legge la memoria — lavora solo sull'audio di Windows come un mixer virtuale. La valutazione finale resta comunque di Activision.</p></details>
+    <details><summary>Funziona con le mie cuffie?</summary><p>Sì, con qualsiasi cuffia: include 68 EQ pronti e un database di 6.797 misure per calibrare la risposta sulle tue.</p></details>
+    <details><summary>Serve una scheda audio particolare?</summary><p>No. Basta Windows 10/11 a 64 bit e un paio di cuffie. Tutto il resto è software.</p></details>
+    <details><summary>L'overlay funziona in schermo intero?</summary><p>Funziona con il gioco in <strong>schermo intero senza bordi</strong>, non in schermo intero esclusivo. I tasti <kbd>Ctrl</kbd>+<kbd>Alt</kbd> funzionano comunque.</p></details>
+    <details><summary>Devo usare Voicemeeter?</summary><p>No. BOOST TATTIC fa tutto da solo: mixer, motore, tray, avvio automatico. Niente Voicemeeter né Equalizer APO.</p></details>
+    <details><summary>Come ricevo gli aggiornamenti?</summary><p>Dalla pagina Aggiornamenti dell'app: la libreria preset si aggiorna da lì, per l'app scarichi la nuova release da GitHub.</p></details>
+    <details><summary>Non sento nulla, cosa controllo?</summary><p>Tre cose, in ordine: nel gioco esci su TATTIC; nell'app premi Avvia audio; controlla che il cavo virtuale sia a 16 canali e 48 kHz.</p></details>
+  </div>
+</section>
+
+<!-- CTA FINALE -->
+<section class="final">
+  <div class="wrap narrow">
+    <img src="assets/logo.jpg" alt="Emblema BOOST TATTIC" width="140" height="76" loading="lazy">
+    <h2>Installa in 5 minuti,<br>dal primo fight senti la differenza.</h2>
+    <a class="btn big" href="https://github.com/inferis995/tattic/releases/latest">⬇ Scarica BOOST TATTIC gratis</a>
+    <p class="muted">Windows 10/11 64-bit · open source · <a href="https://github.com/inferis995/tattic">codice su GitHub</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>BOOST TATTIC — progetto personale open source, non commerciale.</span>
+    <span>Libreria preset CC BY-NC-SA 4.0 · <a href="https://github.com/inferis995/tattic">GitHub</a></span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="hero3d.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

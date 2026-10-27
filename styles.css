@@ -74,6 +74,10 @@ a{color:var(--teal)}
 .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
 .shot .ph{aspect-ratio:16/10;border:2px dashed var(--teal-dim);border-radius:14px;display:grid;place-items:center;background:rgba(90,191,198,.05);color:var(--teal);font-family:var(--cond);font-size:1.4rem;text-transform:uppercase;letter-spacing:.1em}
 .shot figcaption{color:var(--muted);font-size:.92rem;margin-top:.5rem;text-align:center}
+/* FLUSSO */
+.flow{margin-top:1.4rem}
+.flow img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.flow figcaption{color:var(--muted);font-size:.92rem;margin-top:.6rem;text-align:center}
 /* GUIDE */
 .guide{list-style:none;display:grid;gap:.9rem;counter-reset:g;margin-top:1rem}
 .guide li{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.3rem 1.2rem 4.2rem;position:relative}

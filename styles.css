@@ -8,7 +8,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden}
 h1,h2,h3,.cond{font-family:var(--cond);text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
-h1{font-size:clamp(3rem,8vw,6rem);font-weight:700;font-style:italic}
+h1{font-size:clamp(2.5rem,6.4vw,5rem);font-weight:700;font-style:italic}
 h1 span{color:var(--gold);text-shadow:0 0 34px rgba(209,172,100,.35)}
 h2{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:600;font-style:italic;margin:.4rem 0 1.4rem}
 h3{font-size:1.35rem;font-weight:600}
@@ -57,7 +57,7 @@ a{color:var(--teal)}
 .hero .kicker{margin-bottom:.6rem}
 .hero .sub{max-width:640px;margin:1.2rem auto 0;font-size:1.15rem;color:#d8d3c6}
 .hero .sub em{color:var(--teal);font-style:normal;font-weight:600}
-.cta-row{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:1.8rem}
+.cta-row{display:flex;gap:.9rem;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:1.8rem}
 .micro{margin-top:1rem;color:var(--muted);font-size:.95rem}
 .hero-stats{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;max-width:880px;margin:2.6rem auto 0}
 .hero-stats div{background:rgba(42,46,49,.88);padding:1.1rem .6rem;text-align:center}
